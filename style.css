@@ -1,62 +1,170 @@
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital@1&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --primary-color: #1B2338;
-    --secondary-color:#B0253C;
-    --color-text: #fff; 
-    --header-height: 3rem;
+  --primary-color: #1b2338;
+  --secondary-color: #b0253c;
+  --color-text: #fff;
+  --header-height: 3rem;
 }
 
-html, body {
-    width: 100%;
-    height: 100vh;
-    font-family: 'Besley', sans-serif;
-    font-size: 15px;
-    color: ivory;
-    overflow: hidden;
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Besley", sans-serif;
+  font-size: 15px;
+  color: ivory;
+  overflow: hidden;
 }
 
-ul li{
-    list-style-type: none;
+ul li {
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-    cursor: pointer;
-    border: none;
-    outline: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    z-index: 55;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 55;
 }
 
-.first{
-    background-color: var(--primary-color);
+.first {
+  background-color: var(--primary-color);
 }
 
 .second {
-    background-color: white;
-    left: 33.3%;
+  background-color: white;
+  left: 33.3%;
 }
 
 .third {
-    background-color: var(--secondary-color);
-    left: 66.6%;
+  background-color: var(--secondary-color);
+  left: 66.6%;
 }
 
+.left_container,
+.right_container {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  z-index: -50;
+}
+
+.left_container {
+  background-color: var(--primary-color);
+}
+
+.right_container {
+  background-color: var(--secondary-color);
+  left: 50%;
+}
+
+.left_strip,
+.right_strip {
+  position: absolute;
+  width: 5px;
+  height: 100vh;
+  background: whitesmoke;
+  opacity: 0.5;
+  z-index: -10;
+}
+
+.left_strip {
+  left: 120px;
+}
+
+.right_strip {
+  right: 120px;
+}
+
+.body_layout {
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_insider {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu {
+  margin-left: 2.9rem;
+}
+
+.nav__item {
+  margin-bottom: 2rem;
+}
+
+.nav__link {
+  color: var(--color-text);
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+.nav__link:hover {
+  border-bottom: 1px solid var(--color-text);
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.search_btn,
+.cart_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: whitesmoke;
+}
+
+.search_btn {
+  margin-right: 88px;
+}
+
+.search_btn i,
+.cart_btn i {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cart_btn i {
+  color: var(--secondary-color);
+}
